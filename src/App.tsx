@@ -25,10 +25,19 @@ function App() {
     setBudgets(newBudgets);
   }
 
+  const deleteBudget = (id: number) => {
+    const newBudgets = budgets.filter(budget => budget.id !== id);
+    setBudgets(newBudgets);
+  }
+
+  const deleteAllBudgets = (id: number) => {
+    setBudgets([]);
+  }
+
   return (
     <div className="App">
       <Title/>
-      <BudgetsContainerEl budgets={budgets} updateBudget={updateBudget} addBudget={addBudget}/>
+      <BudgetsContainerEl budgets={budgets} updateBudget={updateBudget} addBudget={addBudget} deleteBudget={deleteBudget} deleteAllBudgets={deleteAllBudgets}/>
       <EntireAmountsEl budgets={budgets}/>
     </div>
   );

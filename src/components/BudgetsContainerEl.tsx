@@ -8,16 +8,18 @@ type BudgetsContainerProps = {
     budgets: Budget[]
     updateBudget: Function
     addBudget: Function
+    deleteBudget: Function
+    deleteAllBudgets: Function
 }
 
-const BudgetsContainerEl: React.FC<BudgetsContainerProps> = ({budgets, updateBudget, addBudget}) => {
+const BudgetsContainerEl: React.FC<BudgetsContainerProps> = ({budgets, updateBudget, addBudget, deleteBudget, deleteAllBudgets}) => {
 
     const [selectedBudgetId, setSelectedBudgetId] = useState(null);
 
     return (
         <div className='budgets-container'>
             <InputsEl selectedBudgetId={selectedBudgetId} setSelectedBudgetId={setSelectedBudgetId} updateBudget={updateBudget} addBudget={addBudget}/>
-            <BudgetsListEl budgets={budgets}/>
+            <BudgetsListEl budgets={budgets} deleteBudget={deleteBudget} deleteAllBudgets={deleteAllBudgets}/>
         </div>
     )
 }

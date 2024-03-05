@@ -3,11 +3,18 @@ import './BudgetsListEl.css';
 import { Budget } from '../class/Budget';
 import BudgetEl from './BudgetEl';
 
-type Budgets = {
+type BudgetsListProps = {
     budgets: Budget[]
+    deleteBudget: Function
+    deleteAllBudgets: Function
 }
 
-const BudgetsListEl: React.FC<Budgets> = ({budgets}) => {
+const BudgetsListEl: React.FC<BudgetsListProps> = ({budgets, deleteBudget, deleteAllBudgets}) => {
+
+    const handleClear = () => {
+        deleteAllBudgets();
+    }
+
     return(
         <div>
             <div className='budgets-list'>
@@ -15,7 +22,7 @@ const BudgetsListEl: React.FC<Budgets> = ({budgets}) => {
                     <BudgetEl title={budget.title} cost={budget.cost} key={budget.id}/>
                 ))}
             </div>
-            <button type='reset'>목록 지우기</button>
+            <button type='reset' onClick={handleClear}>목록 지우기</button>
         </div>
     )
 }
