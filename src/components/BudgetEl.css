@@ -1,0 +1,9 @@
+.budget-container {
+    padding: .5em;
+    background-color: white;
+}
+
+.budget-cost {
+    width: 50%;
+    text-align: right;
+}

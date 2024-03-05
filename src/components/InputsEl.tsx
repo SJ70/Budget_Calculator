@@ -1,7 +1,7 @@
 import React from 'react';
-import './Inputs.css';
+import './InputsEl.css';
 
-const Inputs: React.FC = () => {
+const InputsEl: React.FC = () => {
     return (
         <div className='inputs-container'>
             <div className='input-containers'>
@@ -19,4 +19,4 @@ const Inputs: React.FC = () => {
     )
 }
 
-export default Inputs;
+export default InputsEl;

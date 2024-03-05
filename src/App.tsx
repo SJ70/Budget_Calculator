@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
 import Title from './components/Title';
-import BudgetsContainer from './components/BudgetsContainer';
+import BudgetsContainerEl from './components/BudgetsContainerEl';
 
 function App() {
   return (
     <div className="App">
       
       <Title/>
-
-      <BudgetsContainer/>
+      
+      <BudgetsContainerEl/>
 
       <footer>
       </footer>
