@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
+:root {
+  --max-width: 50em;
+  --side-margin: 2em;
+}
 
 .App {
   font-family: 'Nanum Gothic', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: calc(100vw - 2 * var(--side-margin));
+  margin-left: var(--side-margin);
+  margin-right: var(--side-margin);
 }
