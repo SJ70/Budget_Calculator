@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './InputsEl.css';
 import { Budget } from '../class/Budget';
 import { ReactComponent as SubmitIcon } from '../svg/send_FILL1_wght400_GRAD0_opsz24.svg';
 
 type BudgetFnProps = {
     selectedBudgetId: number | null
+    title: string
+    setTitle: Function
+    cost: number
+    setCost: Function
     setSelectedBudgetId: Function
     updateBudget: Function
     addBudget: Function
 }
 
-const InputsEl: React.FC<BudgetFnProps> = ({selectedBudgetId, setSelectedBudgetId, updateBudget, addBudget}) => {
-
-    const [title, setTitle] = useState("");
-    const [cost, setCost] = useState(0);
-
+const InputsEl: React.FC<BudgetFnProps> = ({title, setTitle, cost, setCost, selectedBudgetId, setSelectedBudgetId, updateBudget, addBudget}) => {
 
     const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTitle(e.target.value);
@@ -45,7 +45,7 @@ const InputsEl: React.FC<BudgetFnProps> = ({selectedBudgetId, setSelectedBudgetI
                 </div>
             </div>
             <button className='svg-btn' type='submit' onClick={handleSubmit}>
-                제출
+                {selectedBudgetId ? '수정' :'제출'}
                 <SubmitIcon className='svg'/>
             </button>
         </div>

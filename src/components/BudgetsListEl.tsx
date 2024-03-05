@@ -7,11 +7,14 @@ import { ReactComponent as DeleteIcon } from '../svg/delete_forever_FILL1_wght40
 
 type BudgetsListProps = {
     budgets: Budget[]
+    setSelectedBudgetId: Function
+    setTitle: Function
+    setCost: Function
     deleteBudget: Function
     deleteAllBudgets: Function
 }
 
-const BudgetsListEl: React.FC<BudgetsListProps> = ({budgets, deleteBudget, deleteAllBudgets}) => {
+const BudgetsListEl: React.FC<BudgetsListProps> = ({budgets, setSelectedBudgetId, setTitle, setCost, deleteBudget, deleteAllBudgets}) => {
 
     const handleClear = () => {
         deleteAllBudgets();
@@ -21,7 +24,7 @@ const BudgetsListEl: React.FC<BudgetsListProps> = ({budgets, deleteBudget, delet
         <div className='budgets-list-el'>
             <div className='budgets-list'>
                 {budgets.map(budget => (
-                    <BudgetEl title={budget.title} cost={budget.cost} key={budget.id}/>
+                    <BudgetEl id={budget.id} title={budget.title} cost={budget.cost} setSelectedBudgetId={setSelectedBudgetId} setTitle={setTitle} setCost={setCost} deleteBudget={deleteBudget} key={budget.id}/>
                 ))}
             </div>
             <button className='svg-btn' onClick={handleClear}>

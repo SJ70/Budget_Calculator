@@ -14,12 +14,14 @@ type BudgetsContainerProps = {
 
 const BudgetsContainerEl: React.FC<BudgetsContainerProps> = ({budgets, updateBudget, addBudget, deleteBudget, deleteAllBudgets}) => {
 
+    const [title, setTitle] = useState("");
+    const [cost, setCost] = useState(0);
     const [selectedBudgetId, setSelectedBudgetId] = useState(null);
 
     return (
         <div className='budgets-container'>
-            <InputsEl selectedBudgetId={selectedBudgetId} setSelectedBudgetId={setSelectedBudgetId} updateBudget={updateBudget} addBudget={addBudget}/>
-            <BudgetsListEl budgets={budgets} deleteBudget={deleteBudget} deleteAllBudgets={deleteAllBudgets}/>
+            <InputsEl title={title} setTitle={setTitle} cost={cost} setCost={setCost} selectedBudgetId={selectedBudgetId} setSelectedBudgetId={setSelectedBudgetId} updateBudget={updateBudget} addBudget={addBudget}/>
+            <BudgetsListEl setSelectedBudgetId={setSelectedBudgetId} setTitle={setTitle} setCost={setCost} budgets={budgets} deleteBudget={deleteBudget} deleteAllBudgets={deleteAllBudgets}/>
         </div>
     )
 }
