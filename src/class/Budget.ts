@@ -12,6 +12,9 @@ export class Budget implements IBudget {
     private _id: number;
 
     constructor(title: string, cost: number) {
+        if (title.replaceAll(" ","").length === 0) {
+            throw new Error("title is empty");
+        }
         this._title = title;
         this._cost = cost;
         this._id = Budget.idValue++;
@@ -27,14 +30,6 @@ export class Budget implements IBudget {
 
     get id(): number {
         return this._id;
-    }
-
-    set title(title: string) {
-        this._title = title;
-    }
-
-    set cost(cost: number) {
-        this._cost = cost;
     }
 
 }

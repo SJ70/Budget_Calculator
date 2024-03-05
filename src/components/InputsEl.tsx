@@ -25,11 +25,18 @@ const InputsEl: React.FC<BudgetFnProps> = ({title, setTitle, cost, setCost, sele
     }
 
     const handleSubmit = () => {
-        const budget: Budget = new Budget(title, cost);
-        selectedBudgetId ? updateBudget(selectedBudgetId, budget) : addBudget(budget);
-        setSelectedBudgetId(null);
-        setTitle("");
-        setCost(0);
+        try {
+            const budget: Budget = new Budget(title, cost);
+            selectedBudgetId ? updateBudget(selectedBudgetId, budget) : addBudget(budget);
+            setSelectedBudgetId(null);
+            setTitle("");
+            setCost(0);
+        }
+        catch {
+            window.alert("올바른 항목명을 입력해주세요.");
+            setTitle("");
+            document.getElementById('input-title')?.focus();
+        }
     }
 
     return (
@@ -37,7 +44,7 @@ const InputsEl: React.FC<BudgetFnProps> = ({title, setTitle, cost, setCost, sele
             <div className='input-containers'>
                 <div className='input-container'>
                     <span>지출 항목</span>
-                    <input type='text' onChange={handleTitleChange} value={title} placeholder='예) 렌트비'></input>
+                    <input id='input-title' type='text' onChange={handleTitleChange} value={title} placeholder='예) 렌트비'></input>
                 </div>
                 <div className='input-container'>
                     <span>비용</span>
