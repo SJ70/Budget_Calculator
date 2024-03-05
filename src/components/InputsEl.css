@@ -15,3 +15,9 @@
 
     flex: 1;
 }
+
+.submit-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

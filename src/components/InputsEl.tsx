@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './InputsEl.css';
 import { Budget } from '../class/Budget';
+import { ReactComponent as SubmitIcon } from '../svg/send_FILL1_wght400_GRAD0_opsz24.svg';
 
 type BudgetFnProps = {
     selectedBudgetId: number | null
@@ -43,7 +44,10 @@ const InputsEl: React.FC<BudgetFnProps> = ({selectedBudgetId, setSelectedBudgetI
                     <input type='number' onChange={handleCostChange} value={cost}></input>
                 </div>
             </div>
-            <button type='submit' onClick={handleSubmit}>제출</button>
+            <button className='svg-btn' type='submit' onClick={handleSubmit}>
+                제출
+                <SubmitIcon className='svg'/>
+            </button>
         </div>
     )
 }

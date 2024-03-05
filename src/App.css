@@ -16,3 +16,7 @@
   margin-left: var(--side-margin);
   margin-right: var(--side-margin);
 }
+
+button & .btn {
+  cursor: pointer;
+}

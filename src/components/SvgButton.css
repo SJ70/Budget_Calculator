@@ -1,0 +1,15 @@
+.svg-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    color: white;
+    background-color: rgb(36, 67, 114);
+}
+
+.svg-btn .svg {
+    width: 1.2em;
+
+    margin-left: .5em;
+    fill: white;
+}
