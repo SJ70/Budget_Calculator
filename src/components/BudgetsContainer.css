@@ -1,0 +1,7 @@
+.budgets-container {
+    width: 100%;
+    max-width: calc(var(--max-width) - 2em);
+    padding: 1em;
+    
+    background-color: aquamarine;
+}

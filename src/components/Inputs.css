@@ -1,0 +1,17 @@
+.inputs-container {
+    background-color: blanchedalmond;
+}
+
+.input-containers {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
