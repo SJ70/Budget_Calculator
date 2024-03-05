@@ -4,11 +4,11 @@ import BudgetsListEl from './BudgetsListEl';
 import './BudgetsContainerEl.css';
 import { Budget } from '../class/Budget';
 
-const budgets: Budget[] = [];
-budgets.push(new Budget('식비', 1200));
-budgets.push(new Budget('여가', 12000));
+type Budgets = {
+    budgets: Budget[]
+}
 
-const BudgetsContainerEl: React.FC = () => {
+const BudgetsContainerEl: React.FC<Budgets> = ({budgets}) => {
     return (
         <div className='budgets-container'>
             <InputsEl></InputsEl>

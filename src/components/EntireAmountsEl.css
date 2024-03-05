@@ -1,0 +1,6 @@
+.entire-amounts {
+    width: 100%;
+    max-width: var(--max-width);
+
+    text-align: end;
+}
