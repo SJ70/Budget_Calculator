@@ -11,7 +11,7 @@ const EntireAmountsEl: React.FC<Budgets> = ({budgets}) => {
     return (
         <div className='entire-amounts'>
             <span>
-                총 지출 : {entireAmount}원
+                총 지출 : {entireAmount} 원
             </span>
         </div>
     )

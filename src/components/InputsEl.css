@@ -1,19 +1,31 @@
-.inputs-container {
-    background-color: blanchedalmond;
-}
-
 .input-containers {
     display: flex;
     flex-direction: row;
     gap: 1em;
-}
 
+    padding: .5em;
+}
 
 .input-container {
     display: flex;
     flex-direction: column;
 
     flex: 1;
+}
+
+.input-container span {
+    font-size: 1em;
+
+    color: var(--navy);
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--light-gray);
+    padding: .75em 0 .75em 0;
+
+    font-size: 1em;
 }
 
 .submit-btn {

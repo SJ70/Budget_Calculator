@@ -48,11 +48,11 @@ const InputsEl: React.FC<BudgetFnProps> = ({title, setTitle, cost, setCost, sele
                 </div>
                 <div className='input-container'>
                     <span>비용</span>
-                    <input type='number' onChange={handleCostChange} value={cost}></input>
+                    <input type='number' onChange={handleCostChange} value={cost} step="10"></input>
                 </div>
             </div>
             <button className='svg-btn' type='submit' onClick={handleSubmit}>
-                {selectedBudgetId ? '수정' :'제출'}
+                <span>{selectedBudgetId ? '수정' :'제출'}</span>
                 <SubmitIcon className='svg'/>
             </button>
         </div>

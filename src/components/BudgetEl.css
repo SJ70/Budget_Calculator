@@ -3,10 +3,13 @@
     flex-direction: row;
     align-items: center;
 
-    padding: .5em 1em .5em 1em;
-    background-color: white;
-
     position: relative;
+
+    padding: .75em 1.5em .75em 1.5em;
+    border: 1px solid var(--light-gray);
+    border-radius: .25em;
+
+    transition: background-color 0.75s;
 }
 
 .budget-title {
@@ -17,6 +20,9 @@
     right: 40%;
     text-align: right;
     position: absolute;
+
+    opacity: 75%;
+    font-weight: 300;
 }
 
 .budget-container .svg {
@@ -25,9 +31,9 @@
 }
 
 .budget-container .edit-btn {
-    fill: green;
+    fill: var(--blue);
 }
 
 .budget-container .delete-btn {
-    fill: red;
+    fill: var(--red);
 }

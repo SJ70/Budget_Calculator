@@ -5,10 +5,6 @@ import BudgetsContainerEl from './components/BudgetsContainerEl';
 import EntireAmountsEl from './components/EntireAmountsEl';
 import { Budget } from './class/Budget';
 
-// const budgets: Budget[] = [];
-// budgets.push(new Budget('식비', 1200));
-// budgets.push(new Budget('여가', 12000));
-
 function App() {
   const [budgets, setBudgets] = useState<Budget[]>([]);
 

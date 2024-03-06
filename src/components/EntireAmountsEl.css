@@ -3,4 +3,7 @@
     max-width: var(--max-width);
 
     text-align: end;
+
+    margin-top: .5em;
+    color: white;
 }

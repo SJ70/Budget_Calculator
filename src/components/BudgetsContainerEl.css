@@ -2,6 +2,11 @@
     width: 100%;
     max-width: calc(var(--max-width) - 2em);
     padding: 1em;
+    border-radius: .25em;
     
-    background-color: aquamarine;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }

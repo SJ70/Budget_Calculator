@@ -28,7 +28,7 @@ const BudgetsListEl: React.FC<BudgetsListProps> = ({budgets, setSelectedBudgetId
                 ))}
             </div>
             <button className='svg-btn' onClick={handleClear}>
-                목록 지우기
+                <span>목록 지우기</span>
                 <DeleteIcon className='svg'/>
             </button>
         </div>

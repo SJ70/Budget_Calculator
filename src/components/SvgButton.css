@@ -4,12 +4,29 @@
     align-items: center;
 
     color: white;
-    background-color: rgb(36, 67, 114);
+    background-color: var(--red);
+    padding: .75em 1.2em .75em 1.2em;
+    font-size: .9em;
+
+    border: none;
+    border-radius: .3em;
+
+    margin-top: 1em;
+
+    transition: box-shadow .5s
 }
 
 .svg-btn .svg {
-    width: 1.2em;
+    width: 1.5em;
 
-    margin-left: .5em;
+    margin-left: 1em;
     fill: white;
+}
+
+.svg-btn span {
+    padding-bottom: .2em;
+}
+
+.svg-btn:hover {
+    box-shadow: .3em .3em 0em 0em var(--navy);
 }
