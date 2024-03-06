@@ -16,14 +16,11 @@ function App() {
   }
 
   const addBudget = (budget: Budget) => {
-    const newBudgets = [...budgets];
-    newBudgets.push(budget);
-    setBudgets(newBudgets);
+    setBudgets([budget, ...budgets]);
   }
 
   const deleteBudget = (id: number) => {
-    const newBudgets = budgets.filter(budget => budget.id !== id);
-    setBudgets(newBudgets);
+    setBudgets(budgets.filter(budget => budget.id !== id));
   }
 
   const deleteAllBudgets = (id: number) => {
