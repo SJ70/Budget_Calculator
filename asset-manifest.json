@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Budget_Calculator/static/css/main.ef61d331.css",
-    "main.js": "/Budget_Calculator/static/js/main.196ef672.js",
+    "main.css": "/Budget_Calculator/static/css/main.1ee8624d.css",
+    "main.js": "/Budget_Calculator/static/js/main.c44e8e5c.js",
     "static/js/453.905e226b.chunk.js": "/Budget_Calculator/static/js/453.905e226b.chunk.js",
     "index.html": "/Budget_Calculator/index.html",
     "static/media/delete_forever_FILL1_wght400_GRAD0_opsz24.svg": "/Budget_Calculator/static/media/delete_forever_FILL1_wght400_GRAD0_opsz24.b8e6e9829898af2ec2ddf042f76d1564.svg",
     "static/media/edit_FILL1_wght400_GRAD0_opsz24.svg": "/Budget_Calculator/static/media/edit_FILL1_wght400_GRAD0_opsz24.ae7fb066dd6d6cdee3b48b051e5bc0d5.svg",
     "static/media/send_FILL1_wght400_GRAD0_opsz24.svg": "/Budget_Calculator/static/media/send_FILL1_wght400_GRAD0_opsz24.06225364f231e23978faf747ded16a8e.svg",
-    "main.ef61d331.css.map": "/Budget_Calculator/static/css/main.ef61d331.css.map",
-    "main.196ef672.js.map": "/Budget_Calculator/static/js/main.196ef672.js.map",
+    "main.1ee8624d.css.map": "/Budget_Calculator/static/css/main.1ee8624d.css.map",
+    "main.c44e8e5c.js.map": "/Budget_Calculator/static/js/main.c44e8e5c.js.map",
     "453.905e226b.chunk.js.map": "/Budget_Calculator/static/js/453.905e226b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef61d331.css",
-    "static/js/main.196ef672.js"
+    "static/css/main.1ee8624d.css",
+    "static/js/main.c44e8e5c.js"
   ]
 }
