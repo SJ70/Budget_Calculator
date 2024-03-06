@@ -2,6 +2,7 @@ import React from 'react';
 import './InputsEl.css';
 import { Budget } from '../class/Budget';
 import { ReactComponent as SubmitIcon } from '../svg/send_FILL1_wght400_GRAD0_opsz24.svg';
+import StateType from '../enum/StateType';
 
 type BudgetFnProps = {
     selectedBudgetId: number | null
@@ -12,9 +13,10 @@ type BudgetFnProps = {
     setSelectedBudgetId: Function
     updateBudget: Function
     addBudget: Function
+    setStateType: Function
 }
 
-const InputsEl: React.FC<BudgetFnProps> = ({title, setTitle, cost, setCost, selectedBudgetId, setSelectedBudgetId, updateBudget, addBudget}) => {
+const InputsEl: React.FC<BudgetFnProps> = ({title, setTitle, cost, setCost, selectedBudgetId, setSelectedBudgetId, updateBudget, addBudget, setStateType}) => {
 
     const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTitle(e.target.value);
@@ -31,6 +33,7 @@ const InputsEl: React.FC<BudgetFnProps> = ({title, setTitle, cost, setCost, sele
             setSelectedBudgetId(null);
             setTitle("");
             setCost(0);
+            setStateType(selectedBudgetId ? StateType.Edited : StateType.Added)
         }
         catch {
             window.alert("올바른 항목명을 입력해주세요.");

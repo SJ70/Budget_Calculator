@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './BudgetEl.css';
 import { ReactComponent as DeleteIcon } from '../svg/delete_forever_FILL1_wght400_GRAD0_opsz24.svg'
 import { ReactComponent as EditIcon } from '../svg/edit_FILL1_wght400_GRAD0_opsz24.svg'
+import StateType from '../enum/StateType';
 
 type BudgetProps = {
     id: number
@@ -11,9 +12,10 @@ type BudgetProps = {
     setTitle: Function
     setCost: Function
     deleteBudget: Function
+    setStateType: Function
 }
 
-const BudgetEl: React.FC<BudgetProps> = ({id, title, cost, setSelectedBudgetId, setTitle, setCost, deleteBudget}) => {
+const BudgetEl: React.FC<BudgetProps> = ({id, title, cost, setSelectedBudgetId, setTitle, setCost, deleteBudget, setStateType}) => {
 
     const [backgroundColor, setBackgroundColor] = useState('white');
 
@@ -24,6 +26,7 @@ const BudgetEl: React.FC<BudgetProps> = ({id, title, cost, setSelectedBudgetId, 
     }
 
     const handleDelete = () => {
+        setStateType(StateType.Deleted);
         deleteBudget(id);
     }
 

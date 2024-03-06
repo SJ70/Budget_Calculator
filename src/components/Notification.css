@@ -1,0 +1,41 @@
+.notification {
+    width: 100%;
+    max-width: var(--max-width);
+    text-align: center;
+
+    color: white;
+    border-radius: .25em;
+
+    opacity: 0;
+    animation: fadeInAndOut 2s ease-in-out;
+
+    position: absolute;
+    margin-top: 1.25em;
+}
+
+.notification p {
+    margin: .75em;
+}
+
+.notification.blue{
+    background-color: var(--blue);
+}
+
+.notification.red{
+    background-color: var(--red);
+}
+
+@keyframes fadeInAndOut {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

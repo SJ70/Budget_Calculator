@@ -4,9 +4,12 @@ import Title from './components/Title';
 import BudgetsContainerEl from './components/BudgetsContainerEl';
 import EntireAmountsEl from './components/EntireAmountsEl';
 import { Budget } from './class/Budget';
+import StateType from './enum/StateType';
+import Notification from './components/Notification';
 
 function App() {
   const [budgets, setBudgets] = useState<Budget[]>([]);
+  const [stateType, setStateType] = useState<StateType>(StateType.None);
 
   const updateBudget = (id: number, budget: Budget) => {
     const idx = budgets.map(budget => budget.id).indexOf(id);
@@ -30,8 +33,9 @@ function App() {
   return (
     <div className="App">
       <Title/>
-      <BudgetsContainerEl budgets={budgets} updateBudget={updateBudget} addBudget={addBudget} deleteBudget={deleteBudget} deleteAllBudgets={deleteAllBudgets}/>
+      <BudgetsContainerEl budgets={budgets} updateBudget={updateBudget} addBudget={addBudget} deleteBudget={deleteBudget} deleteAllBudgets={deleteAllBudgets} setStateType={setStateType}/>
       <EntireAmountsEl budgets={budgets}/>
+      <Notification stateType={stateType} budgets={budgets}/>
     </div>
   );
 }
