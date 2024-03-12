@@ -1,12 +1,11 @@
-import React from 'react'
-import { Budget } from '../class/Budget'
-import './EntireAmountsEl.css'
+import './EntireAmounts.css'
+import { useSelector } from 'react-redux';
+import { RootState } from '../modules';
+import { IBudget } from '../modules/budgetList';
 
-type Budgets = {
-    budgets: Budget[]
-}
+const EntireAmountsEl = () => {
+    const budgets: IBudget[] = useSelector((state: RootState) => state.budgetList.list);
 
-const EntireAmountsEl: React.FC<Budgets> = ({budgets}) => {
     const entireAmount = budgets.map(budget => budget.cost).reduce((a, b) => a + b, 0);
     return (
         <div className='entire-amounts'>
