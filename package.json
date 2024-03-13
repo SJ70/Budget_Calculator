@@ -32,7 +32,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://sj70.github.io/Budget_Calculator/",
+  "homepage": "https://sj70.github.io/budget_calculator/",
   "eslintConfig": {
     "extends": [
       "react-app",

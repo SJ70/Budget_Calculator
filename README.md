@@ -1,5 +1,5 @@
 >
-[👉 배포 페이지 바로가기](https://sj70.github.io/Budget_Calculator/)
+[👉 배포 페이지 바로가기](https://sj70.github.io/budget_calculator/)
 
 # 05. 리액트를 이용해서 CRUD 앱 만들기
 
