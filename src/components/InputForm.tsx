@@ -33,7 +33,6 @@ const InputForm = () => {
 
     const handleSubmit = () => {
         try {
-            console.log(formData);
             const budget: Budget = new Budget(formData.title, formData.cost);
             formData.selectedId === null ? onAddBudget(budget) : onReplaceBudget(formData.selectedId, budget);
             formData.selectedId === null ? onNotificateAdded() : onNotificateReplaced();

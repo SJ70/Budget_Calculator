@@ -68,7 +68,6 @@ const inputForm = handleActions<IBudgetList, any> (
         [REPLACE]: (state, {payload: {selectedId, budget}}) => 
             produce(state, draft => {
                 const idx: number = state.list.findIndex(item => item.id === selectedId);
-                console.log(state.list, selectedId, idx);
                 draft.list[idx] = budget;
             }
         ),
