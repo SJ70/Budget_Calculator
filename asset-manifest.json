@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Budget_Calculator/static/css/main.3b376796.css",
-    "main.js": "/Budget_Calculator/static/js/main.338351e9.js",
+    "main.js": "/Budget_Calculator/static/js/main.e2bad56f.js",
     "static/js/453.905e226b.chunk.js": "/Budget_Calculator/static/js/453.905e226b.chunk.js",
     "static/media/redux.cjs": "/Budget_Calculator/static/media/redux.7edfc461ab353f1712ab.cjs",
     "index.html": "/Budget_Calculator/index.html",
@@ -9,11 +9,11 @@
     "static/media/edit_FILL1_wght400_GRAD0_opsz24.svg": "/Budget_Calculator/static/media/edit_FILL1_wght400_GRAD0_opsz24.754ed00cea4a750be8961b31684fa92c.svg",
     "static/media/send_FILL1_wght400_GRAD0_opsz24.svg": "/Budget_Calculator/static/media/send_FILL1_wght400_GRAD0_opsz24.f84019b7e75ae83fef5769d2d7156e26.svg",
     "main.3b376796.css.map": "/Budget_Calculator/static/css/main.3b376796.css.map",
-    "main.338351e9.js.map": "/Budget_Calculator/static/js/main.338351e9.js.map",
+    "main.e2bad56f.js.map": "/Budget_Calculator/static/js/main.e2bad56f.js.map",
     "453.905e226b.chunk.js.map": "/Budget_Calculator/static/js/453.905e226b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3b376796.css",
-    "static/js/main.338351e9.js"
+    "static/js/main.e2bad56f.js"
   ]
 }
